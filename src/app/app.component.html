@@ -1,4 +1,16 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+
+<div *ngFor="let data of mainArray">
+	<div *ngFor="let dataj of data" style="display : inline">
+		{{dataj}}
+	</div>
+</div>
+
+<h3>Jawab</h3>
+Baris : <input [(ngModel)] = "barisText" type="number"/>
+<br>
+Kolom : <input [(ngModel)] = "kolomText" type="number"/>
+<br>
+<br>
+<button (click) ="answer()">Answer</button>
+<h1>{{winner}}</h1>
